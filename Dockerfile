@@ -5,7 +5,7 @@ MAINTAINER Ian Maguire <mr.scalability@gmail.com>
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update
-RUN apt-get -y install nginx  sed python-pip python-dev uwsgi-plugin-python supervisor
+RUN apt-get -y install nginx python3 sed python-pip python-dev uwsgi-plugin-python supervisor
 
 RUN mkdir -p /var/log/nginx/app
 RUN mkdir -p /var/log/uwsgi/app/
@@ -22,7 +22,7 @@ RUN mkdir -p /var/log/supervisor
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 copy app /var/www/app
-RUN pip install -r /var/www/app/requirements.txt
+RUN pip3 install -r /var/www/app/requirements.txt
 
 #EXPOSE 80
 
