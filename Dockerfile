@@ -22,7 +22,7 @@ RUN mkdir -p /var/log/supervisor
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 copy app /var/www/app
-RUN pip3 install -r /var/www/app/requirements.txt
+RUN pip install -r /var/www/app/requirements.txt
 
 #EXPOSE 80
 
