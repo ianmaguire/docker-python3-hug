@@ -8,5 +8,4 @@ RUN pip3 install hug -U
 
 COPY app /var/www/app
 
-#CMD ["/usr/local/bin/hug -f /var/www/app/hello.py"]
-CMD ["/bin/cat /var/www/app/hello.py"]
+CMD [/usr/local/bin/hug -f /var/www/app/hello.py]
