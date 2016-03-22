@@ -6,9 +6,9 @@ RUN mkdir -p /var/log/uwsgi/app/
 RUN mkdir -p /var/log/supervisor
 RUN mkdir -p /var/www/
 
-RUN pip install uwsgi
-RUN pip install supervisor
-RUN pip install hug
+RUN pip3 install uwsgi
+RUN pip3 install supervisor
+RUN pip3 install hug
 
 COPY app /var/www/app
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
