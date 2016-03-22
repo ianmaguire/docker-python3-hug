@@ -1,2 +1,3 @@
 uwsgi
+supervisor
 hug
