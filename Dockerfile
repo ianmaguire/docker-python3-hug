@@ -9,5 +9,4 @@ RUN pip3 install uwsgi -U
 
 COPY app /var/www/app
 
-#CMD [/usr/local/bin/hug -f /var/www/app/hello.py]
-CMD /usr/local/bin/uwsgi --http 0.0.0.0:8000 --wsgi-file  /var/www/app/hello.py --callable __hug_wsgi__
+RUN /usr/local/bin/uwsgi --http 0.0.0.0:8000 --wsgi-file  /var/www/app/hello.py --callable __hug_wsgi__
