@@ -1,3 +1,2 @@
-uwsgi
-supervisor
 hug
+uwsgi
