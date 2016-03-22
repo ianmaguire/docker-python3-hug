@@ -9,4 +9,4 @@ RUN pip3 install gunicorn -U
 
 COPY app /var/www/app
 
-CMD ["/usr/local/bin/gunicorn /var/www/app/hello.py:__hug_wsgi__"]
+CMD ["/usr/local/bin/gunicorn /var/www/app/hello:__hug_wsgi__"]
